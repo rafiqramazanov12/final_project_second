@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.arrivals_section {
+    margin-top: 72px;
+
+    &_title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        vertical-align: middle;
+        color: rgba(0, 0, 0, 1);
+        text-align: center;
+    }
+
+    &_products {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+
+
+
+
+        &_card {
+
+
+
+
+
+            &_img {
+                width: 295px;
+                height: 298px;
+                border-radius: 20px;
+                margin-bottom: 16px;
+
+
+            }
+
+
+            &_name {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                vertical-align: middle;
+                margin-bottom: 8px;
+                color: rgba(0, 0, 0, 1);
+
+            }
+
+
+            &_flex {
+                display: flex;
+                gap: 13px;
+                margin-bottom: 8.26px;
+            }
+
+            &_price {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                vertical-align: middle;
+                color: rgba(0, 0, 0, 1);
+
+            }
+        }
+    }
+
+    &_btn {
+        width: 218px;
+        height: 52px;
+        top: 1548px;
+        left: 611px;
+        border-radius: 62px;
+        border-width: 1px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        gap: 12px;
+
+    }
+
+}
