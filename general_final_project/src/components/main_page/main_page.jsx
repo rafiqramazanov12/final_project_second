@@ -8,7 +8,7 @@ import mainFifthImg from "../../assets/main_fifth_img.svg";
 import mainSixthImg from "../../assets/main_sixth_img.svg";
 import Header from '../header/header';
 import NewArrivals from '../NewArrivals/NewArrivals';
-
+import TopSelling from '../TopSelling/TopSelling';
 const Main_page = () => {
   const arrivalsRef = useRef(null); 
 
@@ -52,7 +52,12 @@ const Main_page = () => {
     
       <div ref={arrivalsRef}>
         <NewArrivals />
+
+        <TopSelling/>
+      
       </div>
+
+
     </>
   );
 };

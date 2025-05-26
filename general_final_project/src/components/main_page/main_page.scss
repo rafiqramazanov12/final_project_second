@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+
+body{
+  font-family: "Poppins", sans-serif;
+}
 li {
   list-style: none;
 }
@@ -61,8 +65,8 @@ a {
 
   &_all_brand {
  display: flex;
-  flex-wrap: wrap; // elementlər çox olduqda növbəti sətirə keçir
-  justify-content: center; // ortalayır
+  flex-wrap: wrap; 
+  justify-content: center; 
   align-items: center;
   gap: 48px;
   background-color: #000;

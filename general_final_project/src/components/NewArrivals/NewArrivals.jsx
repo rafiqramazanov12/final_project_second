@@ -9,7 +9,6 @@ import mainSixImg from "../../assets/images/arrivals_sixth_img.png";
 import mainSeventhImg from "../../assets/images/arrivals_seventh_img.png";
 import mainEighthImg from "../../assets/images/arrivals_eighth_img.png";
 
-
 const products = [
   {
     img: arrivalsFirstImg,
@@ -53,37 +52,36 @@ const products = [
     rating: "4/5",
     price: "$150",
   },
-
   {
     img: mainFifththImg,
     name: "Gradient Graphic T-shirt",
     ratingStars: "⭐️⭐️⭐️⭐️⯨",
     rating: "3.5/5",
     price: "$145",
-
   },
- {
-
-     name: "Polo with Tipping Details",
-     ratingStars: "⭐️⭐️⭐️⭐️⯨",
-     rating: "4/5",
-     img: mainSixImg,
-     price: "$180",
- }
+  {
+    img: mainSixImg,
+    name: "Polo with Tipping Details",
+    ratingStars: "⭐️⭐️⭐️⭐️⯨",
+    rating: "4/5",
+    price: "$180",
+  },
 ];
 
 const NewArrivals = () => {
-  const [visibleCount, setVisibleCount] = useState(4); 
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const handleViewAll = () => {
-    setVisibleCount((prev) => Math.min(prev + 4, products.length)); 
+  const visibleProducts = isExpanded ? products : products.slice(0, 4);
+
+  const handleToggle = () => {
+    setIsExpanded((prev) => !prev);
   };
 
   return (
     <section className="arrivals_section">
       <h3 className="arrivals_section_title">NEW ARRIVALS</h3>
       <div className="arrivals_section_products">
-        {products.slice(0, visibleCount).map((product, index) => (
+        {visibleProducts.map((product, index) => (
           <div key={index} className="arrivals_section_products_card">
             <img
               className="arrivals_section_products_card_img"
@@ -99,11 +97,9 @@ const NewArrivals = () => {
           </div>
         ))}
       </div>
-      {visibleCount < products.length && (
-        <button onClick={handleViewAll} className="arrivals_section_btn">
-          View All
-        </button>
-      )}
+      <button onClick={handleToggle} className="arrivals_section_btn">
+        {isExpanded ? "Show Less" : "View All"}
+      </button>
     </section>
   );
 };

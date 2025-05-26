@@ -87,14 +87,84 @@ a {
     &_btn {
         width: 218px;
         height: 52px;
-        top: 1548px;
-        left: 611px;
         border-radius: 62px;
         border-width: 1px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         background-color: transparent;
         gap: 12px;
+          display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px auto 0 auto;
 
     }
 
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .arrivals_section {
+
+        &_title {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            vertical-align: middle;
+            color: rgba(0, 0, 0, 1);
+        }
+
+
+        &_products_card {
+            width: calc(50% - 20px);
+
+
+            &_img {
+                width: 198px;
+                height: 200.01356506347656px;
+                top: 1217px;
+                left: 16px;
+                border-radius: 13.42px;
+
+            }
+
+            &_name {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                vertical-align: middle;
+                color: rgba(0, 0, 0, 1);
+
+            }
+
+            &_price {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                vertical-align: middle;
+                color: rgba(0, 0, 0, 1);
+            }
+
+        }
+
+
+        &_btn {
+            width: 358px;
+            height: 46px;
+            left: 16px;
+            border-radius: 62px;
+            border-width: 1px;
+            gap: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px auto 0 auto;
+
+
+        }
+    }
 }
