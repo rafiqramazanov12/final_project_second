@@ -100,6 +100,15 @@ const NewArrivals = () => {
       <button onClick={handleToggle} className="arrivals_section_btn">
         {isExpanded ? "Show Less" : "View All"}
       </button>
+
+
+
+
+
+
+      <div className="arrivals_section_border">
+
+      </div>
     </section>
   );
 };

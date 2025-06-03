@@ -9,6 +9,9 @@ import mainSixthImg from "../../assets/main_sixth_img.svg";
 import Header from '../header/header';
 import NewArrivals from '../NewArrivals/NewArrivals';
 import TopSelling from '../TopSelling/TopSelling';
+import DressStyleBrowser from '../DressStyleBrowser/DressStyleBrowser';
+import Testimonials from '../Testimonials/Testimonials';
+import Footer from '../Footer/Footer';
 const Main_page = () => {
   const arrivalsRef = useRef(null); 
 
@@ -54,6 +57,12 @@ const Main_page = () => {
         <NewArrivals />
 
         <TopSelling/>
+
+        <DressStyleBrowser/>
+        <Testimonials/>
+
+        <Footer/>
+
       
       </div>
 
