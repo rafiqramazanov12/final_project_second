@@ -24,7 +24,7 @@ a {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(242, 240, 241, 1);
-    padding: 70px 40px;
+    padding: 60px 20px;
 
     &_left {
       max-width: 600px;
@@ -81,7 +81,6 @@ a {
 
 }
 
-/* ====================== Responsive ====================== */
 
 @media screen and (max-width: 768px) {
 

@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import "./TopSelling.scss";
 
-// Top Selling Product Images
 import topSellingFirstImg from "../../assets/images/topselling_first_img.png";
 import topSellingSecondImg from "../../assets/images/topselling_second_img.png.png";
 import topSellingThirdImg from "../../assets/images/topselling_third_img.png";
 import topSellingFourthImg from "../../assets/images/topselling_fourth_img.png";
 import topSellingFifthImg from "../../assets/images/topselling_fifth_img.png";
 
-// Arrivals (or additional products)
 import mainSixImg from "../../assets/images/arrivals_sixth_img.png";
 import mainSeventhImg from "../../assets/images/arrivals_seventh_img.png";
 import mainEighthImg from "../../assets/images/arrivals_eighth_img.png";
+
 const topSellingProducts = [
   {
     img: topSellingFirstImg,
@@ -114,3 +113,5 @@ const TopSelling = () => {
 };
 
 export default TopSelling;
+
+

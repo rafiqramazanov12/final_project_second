@@ -50,13 +50,13 @@ const testimonialsData = [
 ];
 
 const Testimonials = () => {
-  const scrollRef = useRef(null);  //scrollRef: sürüşən konteyneri göstərir.  useRef ilə DOM elementi tutulur.
+  const scrollRef = useRef(null);  //scrollRef: sürüşən konteyneri göstərir.  useRef ilə DOM elementi tuturug.
 
 
 
   const scroll = (direction) => {
     const container = scrollRef.current;
-    const scrollAmount = 418; 
+    const scrollAmount = 415; 
     if (container) {
       container.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
@@ -65,15 +65,15 @@ const Testimonials = () => {
     }
   };  //İstiqamətə görə (left və ya right) kartları yana sürüşdürür.
 
-// scrollBy: müəyyən qədər (320px) sola və ya sağa aparır.
+// scrollBy: müəyyən qədər sola və ya sağa aparır.
 
   return (
     <section className='testimonials_section'>
       <div className='testimonials_section_header'>
         <h2 className='testimonials_section_title'>OUR HAPPY CUSTOMERS</h2>
         <div className='testimonials_section_arrows'>
-          <img onClick={() => scroll("left")} src={LeftArrow} alt="←" />  
-          <img onClick={() => scroll("right")} src={RightArrow} alt="→" />  
+          <img onClick={() => scroll("left")} src={LeftArrow} alt="" />  
+          <img onClick={() => scroll("right")} src={RightArrow} alt="" />  
           
         </div>
       </div>
