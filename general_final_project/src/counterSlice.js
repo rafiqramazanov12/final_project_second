@@ -81,16 +81,7 @@ const productSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
-    addProduct: (state, action) => {
-      // Yeni məhsul əlavə etmək
-      state.products.push(action.payload);
-    },
-    removeProduct: (state, action) => {
-      // ID-yə görə məhsulu silmək
-      state.products = state.products.filter(
-        (product) => product.id !== action.payload
-      );
-    },
+
   },
 });
 

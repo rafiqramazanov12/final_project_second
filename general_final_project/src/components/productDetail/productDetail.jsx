@@ -1,21 +1,34 @@
-import React, { useEffect, useState } from 'react';
+// src/pages/ProductDetail.jsx
+import React, { useState } from 'react';
 import './productDetail.scss';
 import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToBasket } from '../../redux/basketSlice';
+
 
 const ProductDetail = () => {
   const { id } = useParams();
   const products = useSelector((state) => state.products.products);
   const product = products.find((item) => item.id === Number(id));
+  const dispatch = useDispatch();
 
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => setQuantity((prev) => prev + 1);
-  const decreaseQuantity = () => {if (quantity > 1) setQuantity((prev) => prev - 1);};
+  const decreaseQuantity = () => { if (quantity > 1) setQuantity((prev) => prev - 1); };
 
-  if (!product) {
-    return <p>Product not found.</p>;
-  }
+  const addBasket = () => {
+    const payload = {
+      id: product.id,
+      price: product.price,
+      Image: product.img,
+      title: product.name,
+      quantity,
+    };
+    dispatch(addToBasket(payload));
+  };
+
+ 
 
   return (
     <section className='cart_section'>
@@ -37,23 +50,25 @@ const ProductDetail = () => {
         </p>
 
         <div className='cart_section_right_flex'>
-          <button className='cart_section_right_flex_first'>
-
-          <button
-            onClick={decreaseQuantity}
-            className='cart_section_right_flex_btn'
+          <div className='cart_section_right_flex_first'>
+            <button
+              onClick={decreaseQuantity}
+              className='cart_section_right_flex_btn'
             >
-            -
-          </button>
-          <span className='cart_section_right_flex_quantity'>{quantity}</span>
-          <button
-            onClick={increaseQuantity}
-            className='cart_section_right_flex_btn'
-            >
-            +
-          </button>
+              -
             </button>
-          <button className='cart_section_right_flex_add_to_cart'>
+            <span className='cart_section_right_flex_quantity'>{quantity}</span>
+            <button
+              onClick={increaseQuantity}
+              className='cart_section_right_flex_btn'
+            >
+              +
+            </button>
+          </div>
+          <button
+            onClick={addBasket}
+            className='cart_section_right_flex_add_to_cart'
+          >
             Add to Cart
           </button>
         </div>

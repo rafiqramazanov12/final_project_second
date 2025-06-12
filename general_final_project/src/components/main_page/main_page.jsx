@@ -12,7 +12,6 @@ import NewArrivals from '../NewArrivals/NewArrivals';
 import TopSelling from '../TopSelling/TopSelling';
 import DressStyleBrowser from '../DressStyleBrowser/DressStyleBrowser';
 import Testimonials from '../Testimonials/Testimonials';
-import Footer from '../Footer/Footer';
 
 const Main_page = () => {
 
@@ -58,13 +57,10 @@ const Main_page = () => {
         </div>
       </main>
 
-      <div >
         <NewArrivals />
-      </div>
         <TopSelling />
         <DressStyleBrowser />
         <Testimonials />
-        <Footer />
     </>
   );
 };
